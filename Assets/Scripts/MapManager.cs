@@ -117,8 +117,15 @@ public class MapManager : MonoBehaviour
     public void ProduceFullSodokuByText()
     {
         Initialize_before_produce();
-        string seed = "5006000000000000000000000000000000378000050050020000000000026";//4
-        for(int i=0; i<instance.list_grid.Count;i++)
+        //0000000000000000000000000000000000000000000000000000000000000
+        //string seed = "3070600001202000006000002000000000550009000000005000001000000";//online 8.20
+        //string seed = "6453741625353274863278164526319587451487236456238762154334765";//hard 1.1
+        
+        //string seed = "0004000700000000002000000000000000000000000000800250420070530";//easy 5
+        //string seed = "5634248765335124762769853464273918535892476436875251426376534";//easy 5.1
+        string seed = "5634248765335124762769853464973182535892476436875251426376534";//easy 5.2
+        
+        for (int i=0; i<instance.list_grid.Count;i++)
         {
             if (seed[i] == '0') continue;
             instance.list_grid[i].isSetIn = true;
